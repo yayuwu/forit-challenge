@@ -1,12 +1,10 @@
 "use client"
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState } from "react"
 
-// Crear el contexto
 const UserContext = createContext()
 
-// Componente proveedor de contexto
 export const UserProvider = ({ children }) => {
-  const [nuevosUsuarios, setNuevosUsuarios] = useState([]);
+  const [nuevosUsuarios, setNuevosUsuarios] = useState([])
 
   const agregarUsuario = (usuario) => {
     setNuevosUsuarios((prevUsuarios) => [...prevUsuarios, usuario])
@@ -19,6 +17,5 @@ export const UserProvider = ({ children }) => {
   )
 }
 
-// Hook para usar el contexto
-export const useUser = () => useContext(UserContext);
+export const useUser = () => useContext(UserContext)
 

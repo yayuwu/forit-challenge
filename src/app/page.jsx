@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { getUsers } from "@/utils/getUsers";
-import { useUser } from "@/context/UserContext";
-import Modal from "./ui/modalAgregar";
+import { useEffect, useState } from "react"
+import { getUsers } from "@/utils/getUsers"
+import { useUser } from "@/context/UserContext"
+import Modal from "./ui/modalAgregar"
 
 export default function Home() {
   const { nuevosUsuarios } = useUser()

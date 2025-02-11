@@ -10,16 +10,16 @@ export default function Modal({ openModal, handleCloseModal }) {
     phone: "",
     company: "",
     city: "",
-  });
+  })
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    agregarUsuario(formData); // Se hace la solicitud POST al backend
-    handleCloseModal();
+    e.preventDefault()
+    agregarUsuario(formData)
+    handleCloseModal()
     setFormData({
       name: "",
       username: "",
@@ -69,5 +69,5 @@ export default function Modal({ openModal, handleCloseModal }) {
         </form>
       </div>
     </div>
-  );
+  )
 }
